@@ -1,6 +1,10 @@
 #!/bin/bash
 # Script to install a worker node of the kubernetes cluster
 # Bring node to current versions and install an editor and other software
+
+#disable swap
+sudo swapoff -a
+
 sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install -y vim nano libseccomp2
